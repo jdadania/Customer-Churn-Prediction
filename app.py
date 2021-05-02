@@ -3,6 +3,7 @@ from flask_cors import cross_origin
 import sklearn
 import pickle
 import pandas as pd
+import numpy as np
 
 app = Flask(__name__)
 model = pickle.load(open("customer_churn_prediction_abc_gscv.pkl", "rb"))
