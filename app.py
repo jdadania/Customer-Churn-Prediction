@@ -200,7 +200,7 @@ def predict():
         ]])
 
 
-        return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(pred))
+        return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(prediction))
 
 
     return render_template("home.html")
