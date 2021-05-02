@@ -199,13 +199,11 @@ def predict():
             TotalCharges
         ]])
 
-        
+pred == "Churned"
+
         if(prediction==0):
             print("Not Churned")
             pred =="Not Churned"
-        else:
-            print("Churned")
-            pred == "Churned"
 
 
         return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(pred))
