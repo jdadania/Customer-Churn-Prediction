@@ -198,17 +198,17 @@ def predict():
             MonthlyCharges,
             TotalCharges
         ]])
-		
-		if prediction == 0:
+
+        
+        if(prediction==0):
             print("Not Churned")
-            prediction =="Not Churned"
+            pred =="Not Churned"
         else:
-           print("Churned")
-           prediction =="Churned"
-	   
+            print("Churned")
+            pred == "Churned"
 
 
-        return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(prediction))
+        return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(pred))
 
 
     return render_template("home.html")
