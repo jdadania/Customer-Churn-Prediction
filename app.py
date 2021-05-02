@@ -200,7 +200,7 @@ def predict():
             TotalCharges
         ]])
 
-    prediction=np.argmax(prediction, axis=1)
+    prediction=np.argmax(prediction, axis=0)
     if prediction==0:
         prediction="Churned"
     else:
