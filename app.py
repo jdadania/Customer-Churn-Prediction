@@ -199,8 +199,13 @@ def predict():
             TotalCharges
         ]])
 
-
-        return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(prediction))
+    prediction=np.argmax(prediction, axis=1)
+    if prediction==0:
+        prediction="Churned"
+    else:
+        preds="Not Churned"
+        
+    return render_template('home.html',prediction_text="Customer Churn Prediction is. {}".format(prediction))
 
 
     return render_template("home.html")
